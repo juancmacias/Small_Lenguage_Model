@@ -1,5 +1,10 @@
-transformers[torch]
 datasets
 evaluate
 scikit-learn
 accelerate
+streamlit
+transformers[torch]
+torch
+
+
+

@@ -7,6 +7,7 @@ __pycache__/
 .pytest_cache/
 
 # Virtual environments
+.venv
 .venv-slm-pill/
 venv/
 env/
@@ -15,6 +16,7 @@ env/
 */venv/
 */env/
 */.env/
+fine_tuned_sentiment_model/
 
 # IDE-specific files
 .idea/                  # PyCharm
