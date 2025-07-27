@@ -82,3 +82,6 @@ build/
 
 # Streamlit secrets
 .streamlit/
+
+# Environment variables
+.env
