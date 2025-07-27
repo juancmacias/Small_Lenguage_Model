@@ -58,6 +58,30 @@ El archivo `requirements.txt` incluye:
 
 Puedes desplegar la app web en Hugging Face Spaces siguiendo estos pasos:
 
+## Subir el modelo fine-tuned a Hugging Face Hub
+
+Puedes subir tu modelo entrenado a Hugging Face Hub usando el script `upload_to_hf.py`. Sigue estos pasos:
+
+1. **Crea un token de acceso en [Hugging Face](https://huggingface.co/settings/tokens)** con permisos de escritura (Write).
+2. **Guarda el token en un archivo `.env` en la raíz del proyecto:**
+   ```env
+   HF_TOKEN=tu_token_aquí
+   ```
+3. **Asegúrate de que la carpeta `fine_tuned_sentiment_model/` contiene los archivos del modelo y el tokenizador.**
+4. **Edita el script `upload_to_hf.py` si quieres cambiar el nombre del repositorio o la ruta del modelo.**
+   - Por defecto, sube a `juancmamacias/jd-jcms` y usa la carpeta `fine_tuned_sentiment_model`.
+5. **Ejecuta el script:**
+   ```bash
+   python upload_to_hf.py
+   ```
+   Si el token es válido y tienes permisos, el modelo se subirá a tu repositorio en Hugging Face.
+
+**Notas:**
+- El script crea el repositorio si no existe y sube todos los archivos de la carpeta indicada.
+- Si el modelo es privado, puedes cambiar el parámetro `private` en el script.
+- Si tienes problemas con el token, revisa que esté bien copiado y que empiece por `hf_`.
+
+
 1. Sube los archivos `app.py` y `requirements.txt` a tu nuevo Space (tipo Streamlit) en Hugging Face.
 2. (Opcional) Añade este `README.md` para documentar tu Space.
 3. El Space detectará automáticamente `app.py` y lanzará la app.
