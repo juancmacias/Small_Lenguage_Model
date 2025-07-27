@@ -16,6 +16,7 @@ env/
 */venv/
 */env/
 */.env/
+.env
 fine_tuned_sentiment_model/
 
 # IDE-specific files
